@@ -15,11 +15,11 @@ ePlaces is a modern Web Application (powered by various APIs) writen in JavaScri
 - [Parcel Bundler](https://en.parceljs.org/) : is a zero configuration bundler for web application. I've had a plaisir using it because of these features : **Zero config code splitting**, **Hot module replacement**, **Friendly error logging**, ...
 - [Babel](https://babeljs.io/): is a JavaScript compiler that allows developer to build web appliation using the most recent features.
 
-# What I have learnd
+# What I have learned
 
 - How to fetch data from a none cross orgins endpoint. You can read how [here](https://cors-anywhere.herokuapp.com/),
-- Reading various apis documentation and use them,
+- Read various apis documentation and use them,
 - Use the HERE,
-- Using the most recent Javascript features (modules, reduce, Array methods such : map, filter, some, ... )
+- Use the most recent Javascript features (modules, reduce, Array methods such : map, filter, some, ... )
 
 # Thank you to check it out :)
