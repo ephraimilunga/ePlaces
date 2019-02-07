@@ -36,12 +36,15 @@ class HandleFechApis {
   }
 
   async getUsertCurrentLocation() {
-    // api keys (ipstack is a product built and maintained by apilayer | https://ipstack.com/)
-    const ipToLocationKey = "?access_key=e7aaa4e45f3c7fae3204efd4c3f540a3";
+
+    // cross origi API  end-point 
+    const corsApiUrl = "https://cors-anywhere.herokuapp.com/";
 
     // api baseURL links
     const getIp = "https://api.ipify.org?format=json"; //https://www.ipify.org/
-    const ipToLocation = "http://api.ipstack.com/";
+
+    // end to get user's city and more details such as country name, region name and code, ...
+    const ipToLocation = "http://getcitydetails.geobytes.com/GetCityDetails?fqcn=";
 
     // get the user ip
     const ip = await fetch(getIp)
@@ -50,11 +53,11 @@ class HandleFechApis {
       .catch(e => console.log(e.message));
 
     // get the user location information base on the ip
-    return await fetch(`${ipToLocation}${ip}${ipToLocationKey}`)
+    return await fetch(`${corsApiUrl}${ipToLocation}${ip}`)
       .then(result => result.json())
       .then(data => {
         //using destructuring we extract only needed keys
-        const { city, region_code, country_name, latitude, longitude } = data;
+        const { geobytescity: city, geobytescode: region_code, geobytescountry: country_name, geobyteslatitude: latitude, geobyteslongitude: longitude } = data;
 
         // concatenate the keys value to have one line location info
         const userCurrentCity = `${city}, ${region_code}, ${country_name}`;
@@ -157,8 +160,8 @@ class HandleFechApis {
             <div class="message_to_user_container">
             <div class="message_title_text">
                 <p class="main_message_title">Sorry ! Nothing was found for <span class="highlight">${validate.capitalize(
-                  category
-                )}</span> in <span
+            category
+          )}</span> in <span
                         class="highlight">${city}</span> within <span class="highlight">${validate.roundToPrecision(
             validate.mathOperations(limit, 100, "div"),
             1

@@ -13635,17 +13635,18 @@ function () {
       var _getUsertCurrentLocation = _asyncToGenerator(
       /*#__PURE__*/
       regeneratorRuntime.mark(function _callee() {
-        var ipToLocationKey, getIp, ipToLocation, ip;
+        var corsApiUrl, getIp, ipToLocation, ip;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                // api keys (ipstack is a product built and maintained by apilayer | https://ipstack.com/)
-                ipToLocationKey = "?access_key=e7aaa4e45f3c7fae3204efd4c3f540a3"; // api baseURL links
+                // cross origi API  end-point 
+                corsApiUrl = "https://cors-anywhere.herokuapp.com/"; // api baseURL links
 
                 getIp = "https://api.ipify.org?format=json"; //https://www.ipify.org/
+                // end to get user's city and more details such as country name, region name and code, ...
 
-                ipToLocation = "http://api.ipstack.com/"; // get the user ip
+                ipToLocation = "http://getcitydetails.geobytes.com/GetCityDetails?fqcn="; // get the user ip
 
                 _context.next = 5;
                 return fetch(getIp).then(function (result) {
@@ -13659,15 +13660,15 @@ function () {
               case 5:
                 ip = _context.sent;
                 _context.next = 8;
-                return fetch("".concat(ipToLocation).concat(ip).concat(ipToLocationKey)).then(function (result) {
+                return fetch("".concat(corsApiUrl).concat(ipToLocation).concat(ip)).then(function (result) {
                   return result.json();
                 }).then(function (data) {
                   //using destructuring we extract only needed keys
-                  var city = data.city,
-                      region_code = data.region_code,
-                      country_name = data.country_name,
-                      latitude = data.latitude,
-                      longitude = data.longitude; // concatenate the keys value to have one line location info
+                  var city = data.geobytescity,
+                      region_code = data.geobytescode,
+                      country_name = data.geobytescountry,
+                      latitude = data.geobyteslatitude,
+                      longitude = data.geobyteslongitude; // concatenate the keys value to have one line location info
 
                   var userCurrentCity = "".concat(city, ", ").concat(region_code, ", ").concat(country_name); // set the object to be saved as the current user location
 
@@ -13987,9 +13988,9 @@ function isTheUserScrollWithoutSearching() {
 _globalSelect.submitButtons.forEach(function (button) {
   return button.addEventListener("click", fetchCities);
 }); // get and save the user current location in the local storage
-//apisRequestObject.getUsertCurrentLocation();
-// close the alert message when click one refine button
 
+
+apisRequestObject.getUsertCurrentLocation(); // close the alert message when click one refine button
 
 _globalSelect.mainMessageToTheUser.addEventListener("click", function (e) {
   if (!e.target.classList.contains("refine_message")) return;
@@ -14081,7 +14082,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58788" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54929" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

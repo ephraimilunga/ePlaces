@@ -171,7 +171,7 @@ function isTheUserScrollWithoutSearching() {
 submitButtons.forEach(button => button.addEventListener("click", fetchCities));
 
 // get and save the user current location in the local storage
-//apisRequestObject.getUsertCurrentLocation();
+apisRequestObject.getUsertCurrentLocation();
 
 // close the alert message when click one refine button
 mainMessageToTheUser.addEventListener("click", e => {
@@ -185,7 +185,7 @@ mainMessageToTheUser.addEventListener("click", e => {
   );
 });
 
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function (e) {
   // images to set as background for the header hero section
   const heroImages = [
     "hero_first",
@@ -249,7 +249,7 @@ window.addEventListener("scroll", isTheUserScrollWithoutSearching);
 // listen for click on favorite places filters button
 //and get venues that match the clicked filter button
 favoriteFilter.forEach(filter =>
-  filter.addEventListener("click", function() {
+  filter.addEventListener("click", function () {
     handleRemove.handleActiveElement(
       favoriteFilter,
       "filter_Active",
@@ -262,7 +262,7 @@ favoriteFilter.forEach(filter =>
 // listen for click on all visited cities filters
 // and get venues that match
 visitedCitiesFilters.forEach(filter =>
-  filter.addEventListener("click", function() {
+  filter.addEventListener("click", function () {
     handleRemove.handleActiveElement(
       visitedCitiesFilters,
       "filter_Active",
