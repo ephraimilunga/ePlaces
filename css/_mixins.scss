@@ -1,0 +1,52 @@
+@mixin coverimage($location) {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url($location);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin venueImages($location) {
+  background-image: url($location);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin favoriteIconBg($location) {
+  background-image: url($location);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin arrow_down($location, $size) {
+  background-image: url($location);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: right;
+}
+
+@mixin searchDetails() {
+  font-size: 18px;
+  font-weight: 300;
+  color: color(sub_text);
+}
+
+@mixin bgGradient() {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.003));
+}
+
+@mixin bgGradientTesti() {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.023));
+}
+
+@mixin bgGradientVisitedCity() {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.979),
+    rgba(0, 0, 0, 0.027)
+  );
+}

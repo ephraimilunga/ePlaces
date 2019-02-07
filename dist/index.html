@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ePlaces - @ephraimIlunga</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.c52e0fe2.css">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="/glide.core.min.6b351a27.css">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css">
+    <!--https://insiders.liveshare.vsengsaas.visualstudio.com/join?C815BC5819AA53432ABC5E2C9B03803B5495-->
+    <link rel="apple-touch-icon" sizes="152x152" href="http://ephraimilunga.co.za/eplaces/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://ephraimilunga.co.za/eplaces/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://ephraimilunga.co.za/eplaces/favicons/favicon-16x16.png">
+    <link rel="manifest" href="http://ephraimilunga.co.za/eplaces/favicons/site.webmanifest">
+    <link rel="mask-icon" href="http://ephraimilunga.co.za/eplaces/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="http://ephraimilunga.co.za/eplaces/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-config" content="http://ephraimilunga.co.za/eplaces/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff"> 
+  <script src="/main.c52e0fe2.js"></script><script src="/glide.core.min.6b351a27.js"></script></head>
+  <body>
+   
+    <!--main container-->
+    <main class="main">
+        <!--single nav bar -->
+        <section id="back_to_search" class="fix_search_form single_nav_bar hide_fix_search_form">
+        
+            <div class="general_wrapper">
+                <div class="single_logo">
+                    <img src="/logo.91a27c4f.png" alt="">
+                </div>
+        
+                <div class="single_search_form">
+        
+                    <div class="single_city_input input_container location_input_home input_container">
+                        <input id="location" class="arrow_down" type="text" name="location" value="" placeholder="Type in a City">
+                        <ul class="menu_container location location_container dropdown_container">
+                            <div class="hint_container">
+                                <p class="main_hint">Start typing any City</p>
+                                <p class="sub_hint">Remember ! The world is yours ...</p>
+                            </div>
+                        </ul>
+                    </div>
+        
+                    <div class="single_category_input input_container">
+                        <input id="category" class="arrow_down" type="text" name="category" value="" placeholder="Looking for ?">
+                        <ul class="menu_container category">
+                            <li data-target="category" data-value="Food" data-filtername="food" class="form_filter food_filter">
+                                <img data-target="category" data-value="Food" class="food_red" src="/food_red.e7730f5a.svg" alt="">
+                                <p class="category_fixed_text" data-target="category" data-value="Food">Food</p>
+                            </li>
+        
+                            <li data-target="category" data-value="Coffee" data-filtername="coffee" class="form_filter coffee_filter">
+                                <img data-target="category" data-value="Coffee" class="coffee_red" src="/coffee_red.f233200a.svg" alt="">
+                                <p class="category_fixed_text" data-target="category" data-value="Coffee">Coffee</p>
+        
+                            </li>
+        
+                            <li data-target="category" data-value="Nightlife" data-filtername="nightlife" class="form_filter nightlife_filter">
+                                <img data-target="category" data-value="Nightlife" class="night_life_red" src="/night_life_red.e2e75d9a.svg" alt="">
+                                <p class="category_fixed_text" data-target="category" data-value="Nightlife">Nightlife</p>
+                            </li>
+        
+                            <li data-target="category" data-value="Fun" data-filtername="fun" class="form_filter fun_filter">
+                                <img data-target="category" data-value="Fun" class="fun_red" src="/fun_red.f7d39842.svg" alt="">
+                                <p class="category_fixed_text" data-target="category" data-value="Fun">Fun</p>
+                            </li>
+        
+                            <li data-target="category" data-value="Shopping" data-filtername="shopping" class="form_filter shopping_filter">
+                                <img data-target="category" data-value="Shopping" class="shopping_red" src="/shopping_red.649772d9.svg" alt="">
+                                <p class="category_fixed_text" data-target="category" data-value="Shopping">Shooping</p>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="single_limit_input input_container">
+                        <input id="limit" type="text" class="arrow_down" name="limit" value="10km" placeholder="Bound">
+                        <ul class="menu_container dropdown_container limit">
+                            <li data-target="limit" data-value="1km">
+                                <p data-target="limit" data-value="1km" class="limit_number">1</p>
+                                <p data-target="limit" data-value="1km" class="limit_text">km</p>
+                            </li>
+                        
+                            <li data-target="limit" data-value="2km">
+                                <p data-target="limit" data-value="2km" class="limit_number">2</p>
+                                <p data-target="limit" data-value="2km" class="limit_text">km</p>
+                            </li>
+                        
+                            <li data-target="limit" data-value="3km">
+                                <p data-target="limit" data-value="3km" class="limit_number">3</p>
+                                <p data-target="limit" data-value="3km" class="limit_text">km</p>
+                            </li>
+                        
+                            <li data-target="limit" data-value="4km">
+                                <p data-target="limit" data-value="4km" class="limit_number">4</p>
+                                <p data-target="limit" data-value="4km" class="limit_text">km</p>
+                            </li>
+                        
+                            <li data-target="limit" data-value="10km">
+                                <p data-target="limit" data-value="10km" class="limit_number">5 to 10</p>
+                                <p data-target="limit" data-value="10km" class="limit_text">km</p>
+                            </li>
+                        
+                            <li>
+                                <p class="limit_number">Or type in your own.</p>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="single_search_btn"><a href="#true"><button class="submit_button fixed_form_button">Search</button></a></div>
+                </div>
+        
+                <div class="single_favorite">
+               
+                    <div class="favorite_counter_container favorite_single_view_counter">0</div>
+                    <a href="#liked_venues"><img src="/favorite_single_view.22107d60.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="current_filter_details_fixed_form current_filter_details">
+                <div class="current_filter_infor">
+                    <div class="seach_result_details">
+                        <div class="current_filter_title">
+                            <p>Viewing Result base on :</p>
+                        </div>
+
+                        <div class="search_details search_result_counter">
+                            <img src="/loop.ae8a60c4.svg" alt="">
+                            <p class="search_result_counter_text search_result_details_text">Results Counter</p>
+                        </div>
+                    
+                        <div class="search_details search_result_category">
+                            <img class="category_details_icon" src="/coffee_red.f233200a.svg" alt="">
+                            <p class="search_result_category_text search_result_category_text">Category</p>
+                        </div>
+                    
+                        <div class="search_details search_result_location">
+                            <img src="/map_pin_red.c56f421f.svg" alt="">
+                            <p class="search_result_location_text earch_result_location_text">Current City</p>
+                        </div>
+                    
+                        <div class="switch_off_on_the_map">
+                            <div>Switch</div>
+                    
+                            <div class="switch_container">
+                                <div class="toggle_container">
+                                    <div class="toggle_circle"></div>
+                                </div>
+                            </div>
+                    
+                            <div>the map</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end single nav bar-->
+
+      <!--start header hero section header_hero_wrapper-->
+      <div id="default" class="header_hero">
+            <div class="header_hero_wrapper">
+                <!--start nav bar section-->
+                <section class="nav_bar">
+                    <div class="logo_home">
+                        <div class="logo_img"><img src="/logo.91a27c4f.png" alt=""></div>
+                        <div class="text_text">
+                            <p>places</p>
+                        </div>
+                    </div>
+                
+                    <div class="favorite_home">
+                        <div class="favorite_home_heart">
+                            <div class="favorite_counter_container favorite_counter">0</div>
+                            <a href="#liked_venues"><img src="/favorite_home.eef3b794.svg" alt=""></a>
+                        </div>
+                    </div>
+                </section>
+                <!--end nav bar section-->
+                
+                <!--start search bar section-->
+                <section class="search_form_home">
+                    <div class="form__wrapper">
+                        <div class="search_form_home_title">
+                            <p class="search_form_home_text">From Here, to Anywhere !</p>
+                            <p class="search_form_sub_title">Find the best places to eat, drink, shop, have fun, or visit in any city in the world.</p>
+                        </div>
+                
+                        <div class="search_form_home_filters">
+                            <div data-filtername="food" class="form_filter food_filter">
+                                <img src="/food.314db565.svg" alt="eplaces food filter">
+                                <p>Food</p>
+                            </div>
+                
+                            <div data-filtername="coffee" class="form_filter coffee_filter">
+                                <img src="/coffee.2b7946db.svg" alt="eplaces coffee fiter">
+                                <p>Coffee</p>
+                            </div>
+                
+                            <div data-filtername="nightlife" class="form_filter nightlife_filter">
+                                <img src="/night_life.2d0c81df.svg" alt="eplaces night life filter">
+                                <p>Nightlife</p>
+                            </div>
+                
+                            <div data-filtername="fun" class="form_filter fun_filter">
+                                <img src="/fun.80d813b0.svg" alt="eplaces fun filter">
+                                <p>Fun</p>
+                            </div>
+                
+                            <div data-filtername="shopping" class="form_filter shopping_filter">
+                                <img src="/shopping.d247d389.svg" alt="eplaces shopping filter">
+                                <p>Shopping</p>
+                            </div>
+                        </div>
+                
+                        <div class="search_form_home_inputs">
+                            <div class="search_form_home_inputs_wrapper">
+
+                                <div class="location_input_home input_container">
+                                    <input id="location" class="arrow_down" type="text" name="location" value="" placeholder="Type in a City">
+                                    <ul class="menu_container dropdown_container location">
+                                        <div class="hint_container">
+                                            <p class="main_hint">Start typing any City</p>
+                                            <p class="sub_hint">Remember ! The world is yours ...</p>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <div class="limit_input_home input_container">
+                                    <input id="limit" class="arrow_down limit_on_header_hero" type="text" name="limit" value="10km" placeholder="Bound">
+                                    <ul class="menu_container dropdown_container limit">
+                                        <li data-target="limit" data-value="1km">
+                                            <p data-target="limit" data-value="1km" class="limit_number">1</p>
+                                            <p data-target="limit" data-value="1km" class="limit_text">km</p>
+                                        </li>
+                                    
+                                        <li data-target="limit" data-value="2km">
+                                            <p data-target="limit" data-value="2km" class="limit_number">2</p>
+                                            <p data-target="limit" data-value="2km" class="limit_text">km</p>
+                                        </li>
+                                    
+                                        <li data-target="limit" data-value="3km">
+                                            <p data-target="limit" data-value="3km" class="limit_number">3</p>
+                                            <p data-target="limit" data-value="3km" class="limit_text">km</p>
+                                        </li>
+                                    
+                                        <li data-target="limit" data-value="4km">
+                                            <p data-target="limit" data-value="4km" class="limit_number">4</p>
+                                            <p data-target="limit" data-value="4km" class="limit_text">km</p>
+                                        </li>
+
+                                        <li data-target="limit" data-value="10km">
+                                            <p data-target="limit" data-value="10km" class="limit_number">5 to 10</p>
+                                            <p data-target="limit" data-value="10km" class="limit_text">km</p>
+                                        </li>
+
+                                        <li>
+                                            <p class="limit_number">Or type in your own.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search_button_home">
+                                    <a href="#true"><button class="submit_button">Search</button></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--end search bar section-->
+            </div>
+      </div>
+      <!--end header hero section-->
+
+      <!--start search result container search_result_wrapper--> 
+      <section id="true" class="search_result_container">
+            <div class="search_result_wrapper search_result_wrapper_map_visible">
+                <div class="search_result_title">
+                    <p class="search_result_main_title">Places <span class="highlight">Nearby</span></p>
+                    <p class="search_result_sub_title">Need to change location ? Use the search bar.</p>
+                </div>
+
+                <div class="seach_result_details">
+                    <div class="search_details search_result_counter">
+                        <img src="/loop.ae8a60c4.svg" alt="">
+                        <p class="search_result_counter_text search_result_details_text">Results Counter</p>
+                    </div>
+
+                    <div class="search_details search_result_category">
+                        <img class="category_details_icon" src="/coffee_red.f233200a.svg" alt="">
+                        <p class="search_result_category_text search_result_category_text">Category</p>
+                    </div>
+
+                    <div class="search_details search_result_location">
+                        <img src="/map_pin_red.c56f421f.svg" alt="">
+                        <p class="search_result_location_text earch_result_location_text">Current City</p>
+                    </div>
+
+                    <div class="switch_off_on_the_map">
+                        <div>Switch</div>
+
+                        <div class="switch_container">
+                            <div class="toggle_container">
+                                <div class="toggle_circle"></div>
+                            </div>
+                        </div>
+
+                        <div>the map</div>
+                    </div>
+                </div>
+
+                <div class="search_result_block_container search_result_block_container_map_visible">
+
+                    <div class="search_result_block_content search_result_block_content_map_visible"></div>
+                    
+                    <!--start map-->
+                    <div id="map" class="search_result_map"> </div>
+                    <!--end map-->
+                </div>
+            </div>
+      </section>
+      <!--end search result container -->
+
+      <!--start  place you liked places_you_like_wrapper-->
+      <section id="liked_venues" class="places_you_like_container">
+            <div class="places_you_like_wrapper">
+                <div class="places_you_like_title">
+                    <p class="places_you_like_main_title">Your <span class="highlight">Favorite</span> Places</p>
+                    <p class="places_you_like_sub_title">Below are listed all the places you gave a heart.</p>
+                </div>
+
+
+                <div class="filter_category">
+                    <div data-favoritecategory="all" class="filter_all_container fav_filter_all_container favorite_filter filter_container">
+                        <p class="filter_content_text">All</p>
+                    </div>
+
+                    <div data-favoriteCategory="food" class="filter_food_container favorite_filter filter_container">
+                        <img class="filter_food_img" src="/food_red.e7730f5a.svg" alt="">
+                        <p class="filter_content_text">Food</p>
+                    </div>
+                
+                    <div data-favoritecategory="coffee" class="filter_coffee_container favorite_filter filter_container">
+                        <img class="filter_coffee_img" src="/coffee_red.f233200a.svg" alt="">
+                        <p class="filter_content_text">Coffee</p>
+                    </div>
+                
+                    <div data-favoritecategory="nightlife" class="filter_nightlife_container favorite_filter filter_container">
+                        <img class="filter_nightlife_img" src="/night_life_red.e2e75d9a.svg" alt="">
+                        <p class="filter_content_text">Nightlife</p>
+                    </div>
+                
+                    <div data-favoritecategory="fun" class="filter_fun_container favorite_filter filter_container">
+                        <img class="filter_fun_img" src="/fun_red.f7d39842.svg" alt="">
+                        <p class="filter_content_text">Fun</p>
+                    </div>
+                
+                    <div data-favoritecategory="shopping" class="filter_shopping_container favorite_filter filter_container">
+                        <img class="filter_shopping_img" src="/shopping_red.649772d9.svg" alt="">
+                        <p class="filter_content_text">Shopping</p>
+                    </div>
+
+                    <div class="filter_counter_container filter_container">
+                        <p class="fovorite_venue_counter">0 Result</p>
+                    </div>
+                </div>
+                <!--container for favrite places-->
+                <div class="glide glide_places_you_liked"></div>
+                <!--// end container for favorite places-->
+            </div>
+      </section>
+      <!--end places you liked -->
+
+      <!--start visited location visited_location_wrapper-->
+      <section class="visited_location">
+        <div class="visited_location_wrapper">
+            <div class="visited_location_title">
+                <p class="visited_location_main_title"><span class="highlight">Visited</span> Cities</p>
+                <p class="visited_location_sub_title">Below are listed all the places you have visited.</p>
+            </div>
+            
+            <div class="filter_category">
+                <div data-favoritecategory="all" class="filter_all_container cities_filter_all_container visited_cities_filter filter_container">
+                    <p class="filter_content_text">All</p>
+                </div>
+
+                <div data-favoritecategory="food" class="filter_food_container visited_cities_filter filter_container">
+                    <img class="filter_food_img" src="/food_red.e7730f5a.svg" alt="">
+                    <p class="filter_content_text">Food</p>
+                </div>
+            
+                <div data-favoritecategory="coffee" class="filter_coffee_container visited_cities_filter filter_container">
+                    <img class="filter_coffee_img" src="/coffee_red.f233200a.svg" alt="">
+                    <p class="filter_content_text">Coffee</p>
+                </div>
+            
+                <div data-favoritecategory="nightlife" class="filter_nightlife_container visited_cities_filter filter_container">
+                    <img class="filter_nightlife_img" src="/night_life_red.e2e75d9a.svg" alt="">
+                    <p class="filter_content_text">Nightlife</p>
+                </div>
+            
+                <div data-favoritecategory="fun" class="filter_fun_container visited_cities_filter filter_container">
+                    <img class="filter_fun_img" src="/fun_red.f7d39842.svg" alt="">
+                    <p class="filter_content_text">Fun</p>
+                </div>
+            
+                <div data-favoritecategory="shopping" class="filter_shopping_container visited_cities_filter filter_container">
+                    <img class="filter_shopping_img" src="/shopping_red.649772d9.svg" alt="">
+                    <p class="filter_content_text">Shopping</p>
+                </div>
+            
+                <div class="filter_counter_container filter_container">
+                    <p class="visited_cities_counter">0 Result</p>
+                </div>
+            </div>
+
+            <div class="glide glide_visted_location"></div>
+        </div>
+      </section>
+      <!--end visited location-->
+
+      <!--section footer-->
+      <section class="footer">
+        <div class="footer_wrapper">
+            <img src="/logo.91a27c4f.png" alt="">
+            <p>©2018 | Powered by Foursquare API</p>
+        </div>
+      </section>
+      <!--section footer-->
+    </main>
+    <!--end main container -->
+
+    <!--message to user container-->
+    <div class="main_message_to_the_user main_message_to_the_user_not_visible"></div>
+    <!--end message to user container-->
+
+    <!--delete confirmation-->
+    <div class="delete_confirmation hide_delete_confirmation"></div>
+    <!--end delete confirmation-->
+
+    <div class="delete_trash_container hide_delete_trash_container">
+        <img src="/trash.e2762dec.svg" alt="">
+    </div>
+
+    <!--error message container-->
+    <div style="display: none; z-index:99999999999999999999999999999" class="errorMessage"></div>
+    <div class="cannot_show_the_venue cannot_show_the_venue_hide">
+        <p class="cannot_title">Sorry ! Can't display details for that venue.</p>
+    </div>
+
+    <div class="not_mobile_version">We are currently working on mobile and tablet versions. Please use a desktop.</div>
+    <!--end error  message container-->
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/glide_home.3abddd00.js"></script>
+    <script src="/js.00a46daa.js"></script>
+  </body>
+</html>

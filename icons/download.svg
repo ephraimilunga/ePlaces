@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 61">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdfcfc;
+      }
+
+      .cls-2 {
+        fill: #08cb00;
+      }
+    </style>
+  </defs>
+  <g id="Group_123" data-name="Group 123" transform="translate(-37 -980)">
+    <rect id="Rectangle_66" data-name="Rectangle 66" class="cls-1" width="69" height="61" rx="5" transform="translate(37 980)"/>
+    <path id="download3" class="cls-2" d="M27.624,20.955l-.958,5.072H5.334l-.958-5.072H1.991v8.062H30.009V20.955H27.624Zm-.6-9.009H20V9.016H12v2.93H5.049L15.963,23.358ZM20,3.982H12V5.048H20V3.982Zm0,1.991H12V8.011H20V5.973Z" transform="translate(55.009 994.019)"/>
+  </g>
+</svg>

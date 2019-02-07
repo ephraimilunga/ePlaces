@@ -1,0 +1,774 @@
+// import style for HERE Maps Api
+//@import url();
+
+// ****** Color Object
+$colors: (
+  bg: #f4f4f4,
+  main: #66b979,
+  main_text: #383838,
+  sub_text: #696969,
+  sub_text_block: #7a7a7a,
+  placeholder: #999797,
+  white_text: #fdfcfc,
+  active: #08cb00,
+  footer: #b6b6b6,
+  input_border: #cbc8c8,
+  bg_block: #f4f4f4
+);
+
+// ***** Functions
+// color
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+
+// ***** End Functions
+
+@mixin globalstyle() {
+  // *********** End Global Style
+  //********** Global Style **********//
+  body,
+  html {
+    background-color: color(bg);
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-decoration: none;
+  }
+
+  .highlight {
+    color: color(main);
+  }
+
+  section {
+    width: 100%;
+  }
+
+  // toggle arrow up and down
+  input.arrow_up {
+    @include arrow_down("../icons/arrow_up.svg", 55px);
+  }
+
+  input.arrow_down {
+    @include arrow_down("../icons/arrow_down.svg", 55px);
+  }
+}
+
+// style for the filter details
+
+// end style for the filter details
+
+section.footer {
+  padding: 90px 0;
+
+  div.footer_wrapper {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+
+    img {
+      width: 38px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      @extend %spacing;
+      color: color(footer);
+    }
+  }
+}
+
+main {
+  *opacity: 0.4 !important;
+}
+
+.input_container .menu_container {
+  perspective: 1000px;
+  z-index: 999999;
+  position: absolute;
+  box-shadow: 0px 13px 10px 2px rgba(0, 0, 0, 0.05);
+
+  div.loader_on_search {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: color(bg);
+  }
+
+  div.hint_container {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: color(bg);
+
+    p.main_hint {
+      font-size: 40px;
+      font-weight: 300;
+      color: color(sub_text);
+      margin-bottom: 10px;
+    }
+
+    p.sub_hint {
+      font-size: 15px;
+      font-weight: 400;
+      color: color(main);
+    }
+  }
+}
+
+.input_container .menu_container li {
+  list-style-type: none;
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    background-color: color(bg);
+
+    &:hover {
+      background-color: rgba(102, 185, 121, 0.226);
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: color(white_text);
+
+    &:hover {
+      background-color: rgba(102, 185, 121, 0.226);
+    }
+  }
+}
+div.location_input_home .menu_container,
+div.single_city_input .menu_container {
+  display: none;
+  opacity: 0;
+}
+
+div.location_input_home .menu_container,
+div.single_city_input .menu_container {
+  width: 367px;
+  height: auto;
+  max-height: 200px;
+  overflow: auto;
+  background-color: color(white_text);
+  animation: dropMenue 0.5s ease-in-out forwards;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+
+    div p {
+      font-weight: 400;
+    }
+
+    div.city_name {
+      color: color(sub_text);
+      font-size: 17px;
+    }
+
+    div.country_continent_name {
+      margin-left: auto;
+
+      p {
+        color: color(footer);
+        font-size: 12px;
+        font-weight: 400;
+        //font-style: italic;
+      }
+    }
+  }
+}
+
+div.limit_input_home .menu_container,
+div.single_limit_input .menu_container,
+div.single_category_input .menu_container {
+  display: none;
+  opacity: 0;
+  animation: dropMenue 0.5s ease-in-out forwards;
+}
+
+div.limit_input_home .menu_container,
+div.single_limit_input .menu_container,
+div.single_category_input .menu_container {
+  width: 184px;
+  background-color: color(white_text);
+
+  li {
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+      margin-left: 10px;
+    }
+
+    img.coffee_red {
+      width: 33px;
+    }
+    img.night_life_red {
+      width: 27px;
+      margin-left: 14px;
+    }
+    img.shopping_red {
+      width: 31px;
+    }
+
+    img.fun_red {
+      width: 32px;
+    }
+    p {
+      margin-right: 10px;
+      font-weight: 400;
+      color: color(sub_text);
+    }
+
+    p.category_fixed_text {
+      margin-left: auto;
+    }
+
+    p.limit_number {
+      float: left;
+    }
+    p.limit_text {
+      color: color(footer);
+      margin-left: auto;
+    }
+  }
+}
+
+@keyframes dropMenue {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+// filter block style
+div.filter_category {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  div.filter_Active {
+    background-color: transparent !important;
+    border-bottom: 2px solid color(main) !important;
+    border-radius: 0 !important;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  div.filter_container {
+    display: flex;
+    align-items: center;
+    background-color: color(bg);
+    height: 40px;
+    padding: 15px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-bottom: 2px solid color(main);
+      border-radius: 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      color: color(placeholder);
+    }
+
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    img.filter_fun_img,
+    img.filter_food_img {
+      width: 24px;
+    }
+
+    img.filter_coffee_img {
+      width: 25px;
+    }
+
+    img.filter_nightlife_img {
+      width: 19px;
+    }
+
+    img.filter_shopping_img {
+      width: 22px;
+    }
+  }
+
+  div.filter_counter_container {
+    margin-left: auto;
+    border-bottom: 0px solid transparent;
+    background-color: color(main);
+
+    &:hover {
+      background-color: color(main);
+      border-bottom: 0 solid transparent;
+    }
+
+    p {
+      color: color(white_text);
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
+
+// activate home search form filter
+div.activeFilter {
+  background-color: color(main) !important;
+  transform: translateY(5px);
+}
+
+// loader style
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid color(main);
+  border-color: color(main) transparent color(main) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  margin-top: -5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: color(main);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 5px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 5px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 24px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 43px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+// loader button
+
+.lds-ellipsis_button {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+}
+.lds-ellipsis_button div {
+  position: absolute;
+  margin-top: -10px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: color(white_text);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis_button div:nth-child(1) {
+  left: 5px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis_button div:nth-child(2) {
+  left: 5px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis_button div:nth-child(3) {
+  left: 24px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis_button div:nth-child(4) {
+  left: 43px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+// error message
+
+.errorMessageActive {
+  background-color: color(main);
+  padding: 10px 5px;
+  border-radius: 2px;
+  text-align: center;
+  animation: dropMenue 0.5s ease-in-out forwards;
+}
+
+.errorMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  p {
+    color: color(white_text);
+    margin-bottom: 5px;
+  }
+
+  p.main_error_title {
+    font-weight: 300;
+    font-size: 30px;
+    @extend %spacing;
+  }
+
+  p.sub_error_title {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+@keyframes dropMenue {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+//push_loader_text
+
+p.push_loader_text {
+  color: transparent !important;
+}
+
+// disable element
+.disableElement {
+  cursor: none !important;
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+// message to the user
+div.main_message_to_the_user_not_visible {
+  display: none !important;
+  opacity: 0 !important;
+  z-index: -1 !important;
+}
+div.main_message_to_the_user {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.747);
+  animation: dropMessage 0.6s ease-in-out forwards;
+
+  div.message_to_user_container {
+    width: 60%;
+    margin: auto;
+    background-color: color(white_text);
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 5px;
+
+    div.message_title_text {
+      width: 100%;
+
+      p.main_message_title {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        color: color(placeholder);
+        line-height: 40px;
+      }
+
+      p.message_suggestion,
+      p.sub_message_title {
+        font-size: 18px;
+        font-weight: 400;
+        color: color(placeholder);
+        line-height: 25px;
+      }
+
+      p.sub_message_title {
+        margin-bottom: 10px;
+      }
+
+      p.message_suggestion {
+        margin-bottom: 40px;
+      }
+    }
+
+    div.message_action_button {
+      width: 100%;
+
+      a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 400;
+        padding: 12px 40px;
+        border-radius: 4px;
+        transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      a.refine_message {
+        background-color: color(main);
+        color: color(white_text);
+        border: 1px solid color(main);
+        cursor: pointer;
+
+        &:hover {
+          background-color: color(white_text);
+          color: color(placeholder);
+        }
+      }
+      a.quite_message {
+        border: 1px solid color(main);
+        color: color(placeholder);
+
+        &:hover {
+          background-color: color(main);
+          color: color(white_text);
+        }
+      }
+    }
+  }
+}
+
+@keyframes dropMessage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// animate the like events
+
+/// animate the heart
+.animate_like {
+  animation: tada 0.8s ease backwards;
+}
+
+// animate the red circle likes counter container
+.animate_red_circle {
+  animation: borderWow 0.5s ease backwards;
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(auto);
+  }
+}
+
+@keyframes borderWow {
+  0% {
+    transform: translateY(auto);
+  }
+
+  50% {
+    transform: translate(10px, -15px);
+  }
+
+  100% {
+    transform: translateY(auto);
+  }
+}
+
+//style for favorite places and visited cities
+div.glide_visted_location,
+div.glide_places_you_liked {
+  div.loader_places_ {
+    padding: 30px 0 !important;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    p.fovorite_error_main {
+      font-size: 30px !important;
+      font-weight: 400 !important;
+      color: color(main) !important;
+      margin: 30px 5px 10px 5px !important;
+    }
+
+    p.fovorite_error_sub {
+      font-size: 18px !important;
+      font-weight: 400 !important;
+      color: color(sub_text_block) !important;
+      margin: 0 5px 30px 5px !important;
+    }
+  }
+}
+
+div.glide_places_you_liked {
+  min-height: 215px;
+
+  .custome_style_ {
+    width: 285px;
+    height: 400px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+
+
+// delete confirmation 
+div.delete_confirmation {
+  width: 250px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: color(main);
+  padding: 20px 5px;
+  margin: 0 0 50px 0;
+  transition: all 0.5s ease;
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: color(white_text);
+  }
+}
+
+div.hide_delete_confirmation {
+  transform: translateX(-250px);
+}
+
+
+div.delete_trash_container {
+  position: fixed;
+  bottom: 0;
+  right:0;
+  width: 50px;
+  height: 50px;
+  background-color: color(main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+
+  img {
+    width: 50%;
+  }
+}
+
+
+div.hide_delete_trash_container {
+  transform: translateY(55px);
+}
+// end delete confirmation style
+
+// style for the block favorite venues animation
+div.custome_style_un_carousel {
+  transition: all 0.7s ease !important;
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ePlaces - Single View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/singleview.css"
+    />
+    <!-- Required Core Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+  </head>
+  <body>
+    <!--start main single view-->
+    <main>
+      <!--single nav bar -->
+    <section class="single_nav_bar">
+    
+        <div class="general_wrapper">
+            <div class="single_logo">
+                <img src="imgs/logo.svg" alt="" />
+                <p>places</p>
+            </div>
+    
+            <div class="single_search_form">
+    
+                <div class="single_city_input input_container location_input_home input_container">
+                    <input id="location" class="arrow_down"  type="text" name="location" value="" placeholder="Type in a City" />
+                    <ul class="menu_container location location_container">
+                        <li>
+                            <div class="city_name">
+                                <p>Durban</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>South-Africa - Africa</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>New-York</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Unated-State - Nord America</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="city_name">
+                                <p>Tokyo</p>
+                            </div>
+                            <div class="country_continent_name">
+                                <p>Japan- Asie</p>
+                            </div>
+                        </li>
+
+                        
+
+                    </ul>
+                </div>
+    
+                <div class="single_category_input input_container">
+                    <input type="text" name="category" value="" placeholder="Looking for ?" />
+                    <ul class="menu_container">
+                        <li>
+                            <img class="food_red" src="icons/food_red.svg" alt="">
+                            <p>Food</p>
+                        </li>
+
+                        <li>
+                            <img class="coffee_red" src="icons/coffee_red.svg" alt="">
+                            <p>Coffee</p>
+                                
+                        </li>
+
+                        <li>
+                            <img class="night_life_red" src="icons/night_life_red.svg" alt="">
+                            <p>Nightlife</p>
+                        </li>
+
+                        <li>
+                            <img class="fun_red" src="icons/fun_red.svg" alt="">
+                            <p>Fun</p>
+                        </li>
+
+                        <li>
+                            <img class="shopping_red" src="icons/shopping_red.svg" alt="">
+                            <p>Shooping</p>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="single_limit_input input_container">
+                    <input type="text" name="limit" value="" placeholder="Bounding" />
+                    <ul class="menu_container limit">
+                        <li>
+                                <p class="limit_number">200</p>
+                                <p class="limit_text">meters</p>
+                        </li>
+
+                        <li>
+                                <p class="limit_number">500</p>
+                                <p class="limit_text">meters</p>
+                        </li>
+
+                        <li>
+                                <p class="limit_number">800</p>
+                                <p class="limit_text">meters</p>
+                        </li>
+
+                        <li>
+                                <p class="limit_number">1500</p>
+                                <p class="limit_text">meters</p>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="single_search_btn"><button>Search</button></div>
+            </div>
+    
+            <div class="single_favorite">
+                <div class="favorite_single_view_counter">9+</div>
+                <img src="icons/favorite_single_view.svg" alt="" />
+            </div>
+        </div>
+    </section>
+      <!--end single nav bar-->
+
+      <!--single view details-->
+    <section class="single_view_deails">
+        <div class="general_wrapper">
+            <div class="single_view_gallery">
+                <div class="single_slider_content">
+                    <img src="imgs/single.png" alt="" />
+                </div>
+    
+                <div class="single_slider_arrows">
+                    <div class="single_like"><img src="icons/hart_empty_red.svg" alt=""></div>
+                </div>
+            </div>
+    
+            <div class="single_details_side">
+                
+            </div>
+        </div>
+    </section>
+    <!--end single view details-->
+
+    <!--start single view map-->
+    <section class="single_venue_map">
+        <div class="general_wrapper">
+            <div id="single_map" class="single_venue_map_container">
+            </div>
+        </div>
+    </section>
+    <!--end single view map-->
+
+
+    <!--section footer-->
+    <section class="footer">
+        <div class="footer_wrapper">
+            <img src="imgs/logo.svg" alt="">
+            <p>©2018 | Powered by Foursquare API</p>
+        </div>
+    </section>
+    <!--section footer-->
+    </main>
+    <!--end main single view-->
+
+
+
+
+    <!--start single photo details-->
+    <div class="single_photo_details_view">
+        <div class="single_photo_container" style="background-image: url(imgs/sbg.svg)">
+            <a href="#"> <img src="icons/download.svg" alt=""> </a>
+        </div>
+
+        <div class="photo_deatils_container">
+                <div class="photo_details_content">
+
+                    <div class="single_block single_first_block">
+
+                        <div class="parent created_date">
+                            <p class="title date_title">Created Date</p>
+                            <p class="text date_text">20 Janvier 2013</p>
+                        </div>
+
+                        <div class="parent created_date">
+                            <p class="title date_title">Source</p>
+                            <p class="text date_text">Foursquare iOS</p>
+                        </div>
+
+                        <div class="parent created_date">
+                            <p class="title date_title">Width</p>
+                            <p class="text date_text">960px</p>
+                        </div>
+
+                        <div class="parent created_date">
+                            <p class="title date_title">Height</p>
+                            <p class="text date_text">720px</p>
+                        </div>
+
+                    </div>
+
+                    <div class="single_block single_second_block">
+                    
+                        <div class="parent created_date">
+                            <p class="title date_title">Address</p>
+                            <p class="text date_text">484 Broome St</p>
+                        </div>
+                    
+                        <div class="parent created_date">
+                            <p class="title date_title">Country</p>
+                            <p class="text date_text">United States</p>
+                        </div>
+                    
+                        <div class="parent created_date">
+                            <p class="title date_title">City</p>
+                            <p class="text date_text">New York</p>
+                        </div>
+                    
+                        <div class="parent created_date">
+                            <p class="title date_title">Visibility</p>
+                            <p class="text date_text">Public</p>
+                        </div>
+                    
+                    </div>
+
+                    <div class="single_block single_third_block">
+                        <div class="phot_action_button single_verify_photo">
+                            <img src="icons/check_white.svg" alt="">
+                        </div>
+
+                        <div class="phot_action_button single_close_photo">
+                            <img src="icons/close.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="author_details_arrows">
+                    <div class="author_info">
+                        <img src="imgs/user.svg" alt="">
+                        <div class="single_photo_user_name_">
+                            <p class="author_name_text">Ephraim Ilunga</p>
+                            <p class="author_text">Author</p>
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <img class="arrows_left" src="icons/arrow_left_single_view.svg" alt="">
+                        <img class="arrows_right" src="icons/arrow_right_single_view.svg" alt="">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--end single photo details-->
+
+    <!--strat testimony-->
+    <div class="testimony__button">
+        <img src="icons/testi.svg" alt="">
+    </div>
+
+
+    <div class="testimonials_container testimonials_container_hide">
+        <div class="close_testi">
+            <img class="close_testi_button" src="icons/close.svg" alt="">
+        </div>
+        <div class="glide slider_testimonials_container">
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+
+                    <div class="glide__slide" style="padding: 14px 0;">
+                    
+                        <div class="test_block_container">
+                            
+                            <div class="testi_picture_container" style="background-image: url('imgs/testi.png')">
+                                <div class="testi_user_profile_container">
+                                    <img src="imgs/profile2.png" alt="">
+                                    <div class="testi_user_name_created_date">
+                                        <p class="testi_user_name">Ephraim Ilunga</p>
+                                        <p class="testi_created_date">Posted on 20 Jan. 2014</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="testi_text_container">
+                                <p class="testi_text">Very good service!!! Friendly ‘barista’ lovely hot chocolat drinks en lemon merengue
+                                    tart. Lovely place!!!! </p>
+                            </div>
+                    
+                            <div class="testi_likes_profile_likes_counter">
+                                <div class="testi_likes_profile">
+                                    <img src="imgs/01.png" alt="">
+                                    <img src="imgs/02.png" alt="">
+                                    <img src="imgs/03.png" alt="">
+                                    <img src="imgs/04.png" alt="">
+                                    <img src="imgs/05.png" alt="">
+                                </div>
+                    
+                                <div class="testi_likes_counter">
+                                    <p class="counter_text">5 likes</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+
+
+                    <div class="glide__slide" style="padding: 14px 0;">
+                    
+                        <div class="test_block_container">
+                    
+                            <div class="testi_picture_container" style="background-image: url('icons/testi.png')">
+                                <div class="testi_user_profile_container">
+                                    <img src="imgs/profile.png" alt="">
+                                    <div class="testi_user_name_created_date">
+                                        <p class="testi_user_name">Marc Ilunga</p>
+                                        <p class="testi_created_date">Posted on 24 Dec. 2010</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="testi_text_container">
+                                <p class="testi_text">Lovely place!!!! Very good service!!! Friendly ‘barista’ lovely hot chocolat drinks en lemon merengue
+                                    tart. Lovely place!!!! Lovely place!!!! Lovely place!!!! </p>
+                            </div>
+                    
+                            <div class="testi_likes_profile_likes_counter">
+                                <div class="testi_likes_profile">
+                                    <img src="imgs/01.png" alt="">
+                                    <img src="imgs/02.png" alt="">
+                                </div>
+                    
+                                <div class="testi_likes_counter">
+                                    <p class="counter_text">2 likes</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <div class="glide__arrows testi_arrows" data-glide-el="controls">
+                <img src="icons/arrow_left_simple.svg" class="testi_arrow_left glide__arrow glide__arrow--left" data-glide-dir="<" >
+                <img src="icons/arrow_right_simple.svg" class="testi_arrow_right glide__arrow glide__arrow--right" data-glide-dir=">" >
+            </div>
+
+            <div class="glide__bullets testi_circle_controler" data-glide-el="controls[nav]">
+                <div class="glide__bullet highlight" data-glide-dir="=0"></div>
+                <div class="glide__bullet highlight" data-glide-dir="=1"></div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end tesmoniy-->
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/singleview.js"></script>
+    <script src="js/glide_singleview.js"></script>
+  </body>
+</html>
